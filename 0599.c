@@ -38,23 +38,22 @@ int main(void){
 			}
 		}
 	}
-	for(i=0;i<m;i++){
-		printf("%d\n",p[i]);
-	}
-	for(i=0;i<n;i++){
-		printf("%d\n",v[i]);
+	temp=0;
+	for(i=0;i<c[0][0];i++){
+		temp=temp+p[m-1-i];
 	}
 	i=0;
 	k=m-1;
-	while(p[k]>=v[i]){
+	while(temp>=c[1][i] && n>i && k>=0){
 		for(j=0;j<c[0][i];j++){
 			profit=profit+p[k];
 			k--;
 		}
 		profit=profit-c[1][i];
 		i++;
-		for(){
-			
+		temp=0;
+		for(j=0;j<c[0][i];j++){
+			temp=temp+p[k-j];
 		}
 	}
 	printf("%d\n",profit);
